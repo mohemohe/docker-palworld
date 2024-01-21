@@ -1,0 +1,12 @@
+version: "3"
+services:
+  palworld:
+    build:
+      context: docker
+      args:
+        - STEAM_EULA=${STEAM_EULA}
+    ports:
+      - "8211:8211/udp"
+    volumes:
+      - ./data:/data
+    restart: always
